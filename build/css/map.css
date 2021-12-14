@@ -1,0 +1,219 @@
+@font-face {
+    font-family: Pixel;
+    src: url(../fonts/Fifaks10Dev1.ttf);
+    font-weight: bold;
+}
+
+body, html{
+    font-family: Pixel;
+    font-size: 130%;
+    height: 100%;
+    background-color: black;
+    overflow: hidden;
+    color: white;
+}
+.Main{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Error{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #110408;
+    color: red;
+}
+
+.Success{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #041104;
+    color: green;
+}
+
+.Hidden{
+    display: none !important;
+    width: 0 !important;
+}
+
+.Button{
+    cursor: pointer;
+    width: 100%;
+    background-color: grey;
+    border: 2px darkgrey solid;
+    text-align: center;
+    color: white;
+    margin: 10px 0;
+}
+
+#TorchStatus{
+    position: absolute;
+    display: flex;
+    left: 0;
+    bottom: 15px;
+}
+
+.TorchStatusDivInactive{
+    width: 45px;
+    height: 45px;
+    background-image: url("../assets/torch_icon_inactive.svg");
+    background-size: contain;
+}
+
+.TorchStatusDivActive{
+    width: 45px;
+    height: 45px;
+    background-image: url("../assets/torch_icon.svg");
+    background-size: contain;
+}
+
+.Button:hover{
+    background-color: darkgray;
+}
+.Button:active{
+    background-color: #525252;
+}
+
+input{
+    font-family: Pixel;
+    width: 100%;
+    font-size: 20px;
+}
+
+#GameSpace{
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+}
+
+#Status{
+    z-index: 10;
+    width:300px;
+    height: 200px;
+}
+
+#Map{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    background-size: cover;
+    background-image: url("../assets/first_back.svg");
+}
+#TorchMan{
+    position: absolute;
+    width: 53px;
+    height: 53px;
+    background-image: url("../assets/torchman.svg");
+    background-size: cover;
+    cursor: pointer;
+    transition: top 0.1s linear,  left 0.1s linear;
+}
+
+#TorchMan:hover{
+    background-image: url("../assets/torch-selected.svg");
+}
+
+#Timer{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 0;
+    font-size: 15px;
+}
+
+#Score{
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    color: white;
+}
+#Nickname{
+    position: absolute;
+    right: 5px;
+    bottom: 10px;
+    color: white;
+}
+#ToMenu{
+    position: absolute;
+    width: 100px;
+    right: 0;
+    top: 0;
+}
+
+.Torch{
+    position: absolute;
+    width: 60px;
+    height: 90px;
+    background-image: url("../assets/torch.gif");
+    border-radius: 10px;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.Torch:hover{
+    background-color: rgba(255,182,5, 0.3)
+}
+
+.TorchTwinkling{
+    animation: 2s twinkling infinite;
+}
+
+
+#Notification{
+    background-color: white;
+    color: black;
+    position: absolute;
+    z-index: 100;
+    font-size: 15px;
+    left: 0;
+    width: 150px;
+    top: 0;
+}
+
+.Road{
+    position: absolute;
+}
+#Menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    height: 150px;
+    text-align: center;
+    width: 300px;
+}
+
+#Town{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+@keyframes twinkling {
+    10% {
+        filter: brightness(90%);
+    }
+    30% {
+        filter: brightness(50%);
+    }
+    50% {
+        filter: brightness(30%);
+    }
+    70% {
+        filter: brightness(50%);
+    }
+    90% {
+        filter: brightness(90%);
+    }
+}
